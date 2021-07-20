@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "madan"
+name = "eye"
 version = "0.1.0"
 description = ""
 authors = ["Madan Baduwal <madanbaduwal100@gmail.com>"]
