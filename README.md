@@ -1,31 +1,25 @@
 
-# Madan
+# eye
 --------
-![PyPI](https://img.shields.io/pypi/v/madan)
 
-Madan is an end-to-end open source platform for math,machine learning,Computer Vision, and Natural Language Processing. It has a comprehensive, flexible ecosystem of tools, libraries, and community resources that lets researchers push the state-of-the-art in AI and developers easily build and deploy AI-powered applications.
-
-Example  : One function that computes the object detection, depth of the object, face recognition, and object tracking.
-<img src="/madanlibrarydemo.gif" alt="GitHub badge" />
+It is difficult to make a model that functions as a human eye. Object detection, face recognition, depth calculation, object tracking ... tasks are difficult to do by a single ML model.  In this project, I am trying to combine all computer vision models to mimic the human eye i.e single function that do all computer vision tasks.
 
 
-# Table of content
-## 1. [Math](https://github.com/MadanBaduwal/ai_library/tree/master/madan/math)
-## 2. [Machine learning](https://github.com/MadanBaduwal/ai_library/tree/master/madan/ml)
-## 3. [Computer Vision](https://github.com/MadanBaduwal/ai_library/tree/master/madan/cv)
-## 5. [Natural Language Processing](https://github.com/MadanBaduwal/ai_library/tree/master/madan/nlp)
--------
+<img src="/demo.gif" alt="GitHub badge" />
+
+
+
 ## Install
 
 To install the current release
 ```shell
-$ pip install madan
+$python3 -m venv venv
+$source venv/bin/activate
+$pip3 install requirements.txt
+
+$pip3 freeze > requirements.txt # after add some feature freeze all dependencies
+
 ```
-<img src="/madaninstalldemo.gif" alt="GitHub badge" />
-
-To update madan to the latest version, add --upgrade flag to the above commands.
-
-
 
 
 
