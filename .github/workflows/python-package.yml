@@ -1,0 +1,52 @@
+# name: Branch Tests
+
+# on:
+#   push:
+#     branches-ignore:  # master lai ignore  garxa aru push huda yo trigger hunxa
+#       - master
+#   pull_request:   
+#     branches-ignore:
+#       - master
+
+# jobs:
+#   test:
+#     runs-on: ubuntu-latest
+
+#     strategy:
+#       matrix:
+#         python-version: [3.7, 3.8]
+
+#     steps:
+#       - uses: actions/checkout@v2
+
+#       - name: Set up Python ${{ matrix.python-version }}
+#         uses: actions/setup-python@v2
+#         with:
+#           python-version: ${{ matrix.python-version }}
+
+#       - name: Get full python version
+#         id: full-python-version
+#         run: echo ::set-output name=version::$(python -c "import sys; print('-'.join(str(v) for v in sys.version_info[:3]))")
+
+#       - name: Install and set up Poetry
+#         run: |
+#           python -m pip install --upgrade pip
+#           pip install --upgrade poetry --pre
+#           poetry config virtualenvs.in-project true  # poetry ma config x
+
+#       - name: Set up cache
+#         uses: actions/cache@v1
+#         with:
+#           path: .venv
+#           key: venv-${{ runner.os }}-${{ steps.full-python-version.outputs.version }}-${{ hashFiles('**/poetry.lock') }}
+
+#       - name: Install dependencies
+#         run: poetry install
+
+#       - name: Run pre-commit action
+#         env:
+#           SKIP: install-dependencies,test
+#         uses: pre-commit/action@v2.0.0
+
+#       - name: Run Tox  # tox run grxa
+#         run: poetry run tox -e py
