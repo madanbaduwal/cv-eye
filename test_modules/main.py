@@ -8,11 +8,11 @@ import numpy as np
 
 
 
-from data import camerasensro
-from object_detection import detection
-from object_tracking import objects_tracking
-from image_depth import depth
-from faces_recognition import face_recog
+from eye.sensordata import camerasensro
+from eye.detection import object_detection
+from eye.tracking import objects_tracking
+from eye.depth import image_depth
+from eye.recognition import face-recognition
 
 
 
@@ -21,7 +21,7 @@ from faces_recognition import face_recog
 sensordata = camerasensro.Sensordata()
 object_detec = detection.Detection()
 object_tracking = objects_tracking.CentroidTracker()
-face_reco = face_recog.Faces_recognition()
+face_reco = face-recognition.FacesRecognition()
 face_reco.traning()
 
 while True:
@@ -40,7 +40,7 @@ while True:
         box = [object["xmin"],object["ymin"],object["xmax"],object["ymax"]]
         box = np.array(box)
         rects.append(box.astype("int"))
-        hist, dept = depth.get_hist_depth(depth_colormap,box)
+        hist, dept = image_depth.get_hist_depth(depth_colormap,box)
         
         # Face recognition result
         crop_img = color_image[object["ymin"]:object["ymax"], object["xmin"]:object["xmax"]]
