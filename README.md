@@ -31,8 +31,8 @@ $ cd eye
 Run single function that do computer vision tasks.
 
 ```shell
-$ cd test_modules
-$ python main.py
+
+$ python inference.py
 
 ```
 
