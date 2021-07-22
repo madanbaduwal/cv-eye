@@ -20,7 +20,11 @@ $pip3 install requirements.txt
 $pip3 freeze > requirements.txt # after add some feature freeze all dependencies
 
 ```
+or
 
+```
+$ poetry install
+```
 ## Usage
 
 Move toward project folder
