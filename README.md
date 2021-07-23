@@ -45,7 +45,7 @@ $ python inference.py
 1. [Coral tpu](https://coral.ai/) for object detection
 2. [Intel® RealSense™ Depth Camera D435](https://www.intelrealsense.com/depth-camera-d435/) for calculating the depth of an image
 3. [Face recognition library](https://pypi.org/project/face-recognition/) for face recognition
-4. Object tracking custom algorithm for object tracking
+4. Object tracking custom algorithm for object tracking.
     
 
 
